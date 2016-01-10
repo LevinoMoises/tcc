@@ -1,0 +1,100 @@
+\chapter{Suporte Tecnológico}
+
+Este capítulo apresenta as ferramentas utilizadas no suporte do desenvolvimento desse TCC. São apresentados os componentes necessários para a aplicação de Sistemas MultiAgentes, e outras necessárias para a aplicação de boas práticas de Engenharia de Software.
+
+\section{Sistemas MultiAgentes}
+
+Sistemas MultiAgentes não são largamente utilizados no desenvolvimento de \textit{Mobile Social Games}, somente a plataforma AMUSE(\textit{Agent-based Multi-User Social Environment}) apresenta uma aplicação desse paradigma. O AMUSE possui como base os \textit{frameworks} JADE(\textit{Java Agent DEvelopment Framework}) e WADE(\textit{Workflows and Agents Development Environment}), que serão abordados nesse capítulo.
+
+    \subsection{Plataforma JADE}
+
+O \textit{framework} JADE(\textit{Java Agent DEvelopment Framework}) é um \textit{framework} de software completamente implementado em Java. Ele simplifica a implementação de Sistemas MultiAgentes através de uma camada \textit{middle-ware} que está em conformidade com as especificações da FIPA(\textit{Foundation for Intelligent Physical Agents}), e através de um conjunto de ferramentas gráficas que suportam a fase de depuração e implantação\cite{jade}.
+
+JADE é um software livre, distribuído sob a licença LGPL(\textit{Lesser General Public License}), juntamente com todas as suas extensões e \textit{plugins}. O repositório do projeto e todas as suas extensões são compartilhadas com a comunidade através do repositório \textit{subversion} disponível em: \url{https://jade.tilab.com/svn/jade/trunk}.
+
+A Figura \ref{figura:jade} resume a estrutura da plataforma Jade. Uma aplicação baseada no JADE é composta por vários componentes. Os principais componentes são a plataforma, os contêineres e os agentes. Os agentes executam tarefas e trocam informações através de mensagens \cite{fabio2007}. Os agentes são posicionados no topo de uma plataforma que provê serviços básicos como troca de mensagens. Uma plataforma é composta por um, ou vários contêineres. Cada contêiner pode ser executado em \textit{hosts} distintos. Cada contêiner pode conter zero ou vários agentes. Existe um tipo especial de contêiner, \textit{MainContainer}. Esse contêiner é necessariamente o primeiro a ser inicializado na plataforma, e possui dois tipos especiais de agentes: AMS e DF. O AMS é o único agente capaz de executar operações em nível de plataforma, e o DF é responsável por controlar os serviços disponibilizados pelos outros agentes \cite{jade}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=10cm]{figuras/jade_architecture.png}
+  \caption{Arquitetura do \textit{framework} JADE \cite{jadeArchitechture}}
+  \label{figura:jade}
+\end{figure}
+
+\subsubsection{JADE para Android}
+
+A plataforma JADE possui um conjunto de extensões que atendem a diversas necessidades. Uma dessas extensões é o JADE para Android, uma extensão necessária para que dispositivos Android possam implantar agentes JADE. Em detalhes, o JADE é envolvido em um serviço específico Android. Um serviço Android é um componente de aplicação que pode executar operações de longa duração e que não fornecem uma interface para o usuário. Outros componentes da aplicação podem iniciar um serviço e ele continuará a execução em \textit{background} mesmo que o usuário mude de aplicação \cite{bergenti2014}.
+
+O JADE para Android fornece uma interface que possibilita que aplicações iniciem agentes, disparem comportamentos, e em geral, compartilhem dados entre agentes. Por conseguinte, é possível descobrir pares remotos, realizar conversas complexas, explorar ontologias JADE, executar atividades em \textit{background} de acordo com o comportamento, e tirar proveito de todas as funcionalidades do JADE \cite{bergenti2014}.
+
+    \subsection{Plataforma WADE}
+
+WADE(\textit{Workflows and Agents Development Environment}) é a principal evolução do JADE e adiciona a habilidade de definir lógicas de sistema de acordo com a metáfora de fluxo de trabalho, além de prover mecanismos que ajudam a gerir complexidades inerentes a Sistemas MultiAgentes distribuídos, tanto em administração, quanto em tolerância a falhas \cite{wade2009}.
+Até o presente momento, o AMUSE utiliza o WADE apenas pelas suas características de flexibilidade e escalabilidade em \textit{deployment} \cite{bergenti2015}.
+
+O principal componente da plataforma WADE é \textit{WorkflowEngineAgent}, uma classe que extende o agente básico do JADE incorporando um pequeno e leve motor de fluxo de trabalho. Além dos comportamentos normais do JADE, um \textit{WorkflowEngineAgent} é capaz de executar fluxos de trabalho representados de acordo com as especificações do WADE. Um fluxo de trabalho é uma definição formal do processo em termos de atividades a serem executadas, relações entre elas, critérios que especificam sua ativação e términio, e informações adicionais, como participantes, ferramentas de software a serem invocadas, entradas requeridas e saídas esperadas e informação manipulada durante a execução. Essa abordagem torna possível a combinação da expressividade de metáforas de fluxo de trabalho com o poder de uma linguagem de programação, como o Java, além de possibilitar o uso de fluxos de trabalho para definição de lógicas internas de sistema \cite{wade}.
+
+A Figura \ref{figura:wade} exemplifica a plataforma WADE. Os principais componentes da plataforma são: JADE, responsável pelos agentes e comportamentos, comunicação, e distribuição da execução; WADE, responsável pela construção do fluxo de trabalho, administração e controle de falhas; \textit{Application}, a aplicação desenvolvida com suas caracaterísticas específicas; WOLF (\textit{WOrkflow LiFe cycle management environment}), ambiente de desenvolvimento gráfico para a plataforma WADE, caso o usuário utilize a IDE (\textit{Integrated Development Environment}) Eclipse.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=10cm]{figuras/wade}
+  \caption{Plataforma WADE \cite{wadeUserGuide}}
+  \label{figura:wade}
+\end{figure}
+
+    \subsection{Plataforma AMUSE}
+
+O AMUSE(\textit{Agent-based Multi-User Social Environment}) é uma plataforma de código aberto, baseada no JADE e WADE, que facilita o desenvolvimento de aplicações sociais distribuídas que envolvem usuários em atividades de cooperação e competição. O foco principal do AMUSE é no suporte de jogos \textit{multi-player online} para o sistema Android. O AMUSE utiliza a base do WADE e JADE para controlar todas as comunicações e questões de gestão de componentes. A plataforma aborda aspectos relacionados à organização, coordenação e sincronização de partidas entre jogadores. Ela não oferece suporte para o desenvolvimento de interfaces gráficas \cite{amuse}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=13cm]{figuras/amuse_architecture}
+  \caption{Visão arquitetural alto nível do AMUSE}
+  \cite{bergenti2015}
+  \label{figura:amuse_architecture}
+\end{figure}
+
+A Figura \ref{figura:amuse_architecture} mostra uma visão alto nível da arquitetura do AMUSE. Todas as aplicações baseadas no AMUSE englobam um cliente que fornece a interface com o usuário, e qualquer outra característica específica de lógica do lado do cliente. A aplicação do lado do cliente faz uso da biblioteca do AMUSE para interagir com outros usuários e com o servidor.
+Aplicações que requerem execução de lógicas no lado do servidor contam com um ambiente PaaS(\textit{Platform as a Service}) para essas execuções. Isso significa que o AMUSE fornece componentes que tornam a plataforma prestadora de serviço. A aplicação não tem conhecimento dos detalhes referentes a hardware, sistemas operacionais e outras características do \textit{host}. Por outro lado, eles são implementados em um ambiente de nuvem, e o AMUSE garante que a aplicação tenha os recursos suficientes para sua execução \cite{amuseStartupGuide}.
+
+O AMUSE fornece um conjunto de funcionalidades que não estão estritamente ligadas ao domínio de jogos. Essas funcionalidades são: \textit{Application management}, \textit{User Management}, \textit{Clock synchronization}, \textit{Text message exchange}, \textit{Peer-to-peer pipe management} e \textit{Centralized match coordination}. Essas funcionalidades são implementadas através de recursos provenientes do JADE, WADE e agentes da própria plataforma. Esse conjunto de agentes estão do lado do servidor, e do lado do usuário. As interações entre esses diferentes tipos de agentes fornecem a funcionalidade da plataforma. Os diferentes tipos de agentes disponibilizados pela plataforma são \cite{bergenti2015}:
+
+\begin{itemize}
+  \item MMA\textit{(Match Manager Agent):} Este é o único agente no lado do usuário. Ele tem como responsabilidade fazer a interface entre o usuário e os agentes do lado do servidor, e executar tarefas que não necessitam de interação com os agentes do servidor;
+  \item AMA\textit{(Application Manager Agent):} Agente responsável por realizar o controle dos jogos disponibilizados pela plataforma e seus ciclos de vida;
+  \item GRA\textit{(Games Room Agent):} Agente responsável pelo controle dos dados compartilhados em jogos com interações síncronas;
+  \item UMA\textit{(User Manager Agent):} Este agente realiza o controle dos perfis e relações dos usuários com os demais jogadores;
+  \item MTA\textit{(Match Tracer Agent):} O agente MTA tem como objetivo suprir as necessidades dos jogos que necessitam de opções de reiniciar e persistir os seus estados.
+\end{itemize}
+
+
+\section{Ferramentas de Suporte e Desenvolvimento}
+
+Um conjunto de ferramentas foi selecionado para auxiliar o desenvolvimento desse trabalho. Esse conjunto de ferramentas é necessário para a implementação do código, teste, controle de versão e outras atividades inerentes ao escopo desse projeto.
+
+    \subsection{Teste de Software}
+
+Para a realização de testes unitários, o \textit{framework} selecionado foi o JUnit. JUnit é um \textit{framework} de código aberto para escrita de testes repetíveis na linguagem Java. Ele é uma instância da arquitetura xUnit para testes unitários \cite{junit2015}.
+
+    \subsection{Controle de Versão}
+
+Para o controle de versão do desenvolvimento do projeto, a ferramenta selecionada foi GIT. O Git é um sistema distribuído de controle de versão, disponibilizado de maneira livre e código aberto. Ele é projetado para lidar com projetos de diversos tamanhos com velocidade e eficiência \cite{git}. O repositório do projeto está hospedado no GitHub, que é um repositório web baseado no Git. Ele oferece todas as funcionalidades de controle de versão presentes no Git, como também adiciona suas próprias funcionalidades \cite{gitHub}.
+
+    \subsection{Ferramentas de Desenvolvimento}
+%Maybe Android Studio
+
+As ferramentas de desenvolvimento selecionadas para o suporte ao projeto são: Atom, LaTex, Eclipse e MacOS.
+
+O Atom é um editor de texto de código aberto, customizável, com suporte para todos os tipos de códigos abordados nesse trabalho e disponível para os sistemas operacionais Mac OS, Windows e Linux. Ele possui de forma nativa suporte para controle de versão através do Git \cite{atom}.
+
+LaTeX é um sistema de preparação de documentos para a composição tipográfica de alta qualidade. Ele inclui funcionalidades projetadas para a produção técnica e científica de documentos \cite{latex}.
+
+O Eclipse é uma IDE (\textit{Integrated Development Environment}) \textit{open source} para
+desenvolvimento Java, com suporte para outras linguagens através de plug-ins \cite{eclipse}.
+
+Por fim, o sistema operacional escolhido foi o Mac OS. Ele é desenvolvido pela Apple e baseado no Unix. A versão utilizada no desenvolvimento desse trabalho é a Mac OS X El Captain \cite{macos}.
+
+\section{Considerações Finais do Capítulo}
+
+TODO
