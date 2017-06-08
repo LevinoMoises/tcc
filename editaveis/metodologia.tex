@@ -142,9 +142,8 @@ projeto, pois ocorre em um estágio inicial de desenvolvimento.
 Para provar a viabilidade técnica do desenvolvimento da proposta, foi elaborada
 uma prova de conceito, que possui como objetivo principal a integração das
 várias plataformas presentes na proposta desse projeto. As subseções
-\ref{subsec:descconceito}, \ref{subsec:configambiente} e
-\ref{subsec:integracaoplataformas} detalham a Descrição da Prova de Conceito,
-Configuração do Ambiente de Desenvolvimento, e Integração Entre Plataformas,
+\ref{subsec:descconceito} e \ref{subsec:configambiente} detalham a Descrição da
+Prova de Conceito e Configuração do Ambiente de Desenvolvimento,
 respectivamente.
 
   \subsection{Descrição da Prova de Conceito}
@@ -154,24 +153,63 @@ respectivamente.
   WADE, AMUSE e Android para a aplicação do paradigma MultiAgentes em
   \textit{Mobile Social Games}.
 
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=5cm]{figuras/login_screen}
+    \caption{Protótipo de tela de login para Prova de Conceito}
+    \label{figura:login_screen}
+  \end{figure}
+
   Para validar as integrações entre as plataformas mencionadas anteriormente,
   proporcionar a configuração do ambiente de desenvolvimento, e criar um
   subsídio reutilizável para o desenvolvimento da proposta, capítulo
-  \ref{chapter:proposta}, a seguinte Prova de Conceito foi planejada: uma
-  versão inicial de controle de \textit{login} de usuários através de nome e
+  \ref{chapter:proposta}, a seguinte Prova de Conceito foi desenvolvida: uma
+  versão inicial de controle de autenticação de usuários através de nome e
+  senha, conforme Figura \ref{figura:login_screen}.
+
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{figuras/platforms_overview}
+    \caption{Visão arquitetural alto nível da Prova de Conceito}
+    \label{figura:platforms_overview}
+  \end{figure}
+
+  Uma visão arquitetural alto nível da Prova de Conceito pode ser vista na
+  Figura \ref{figura:platforms_overview}. Essa Prova de Conceito possui a
+  integração entre as plataformas, e utiliza o banco de dados SQL H2 Database
+  \cite{h2db}, devido sua simplicidade de integração. No entanto, esse banco
+  pode ser alterado, caso necessário.
+
+  O protótipo de aplicativo Android é disposto na Figura
+  \ref{figura:platforms_overview} e descrito através do diagrama de classes na
+  Figura \ref{figura:class_diagram_prototype}. Ele utiliza as bibliotecas AMUSE
+  \textit{client} e JADE Android para o controle, e comunicação do processo de
+  autenticação do usuário com a plataforma local AMUSE.
+
+  Esse processo de autenticação é realizado através das classes
+  \textit{DefaultLoginManager}, \textit{CallbackManager} e
+  \textit{AmuseClient}. A classe \textit{AmuseClient} é responsável por
+  estabelecer a comunicação com a plataforma AMUSE, a classe
+  \textit{CallbackManager} é utilizada para o tratamento das funções de
+  \textit{callback}, e a classe \textit{DefaultLoginManager} é uma classe
+  utilitária que fornece os métodos de autenticação simples através de nome e
   senha.
 
-  Esta primeira versão de controle de \textit{login} poderá ser reutilizada na
-  proposta, permitirá que os fluxos de integração entre as plataformas seja
-  validado, e o ambiente de desenvolvimento seja configurado.
+  Esta primeira versão de controle de autenticação permitiu que os fluxos de
+  integração entre as plataformas fossem validados, e o ambiente de
+  desenvolvimento configurado. Além de ser um módulo reutilizável para a
+  proposta.
 
   O tópico a seguir descreve os passos necessários para a configuração do
   ambiente de desenvolvimento, utilizando como base as ferramentas de
   desenvolvimento, seção \ref{sec:tecferramentasdesenvolvimento}.
 
-  TODO
-  % Descrição arquitetural
-  % JADE - WADE - AMUSE - BANCO - APP
+  \begin{figure}[h]
+    \centering
+    \includegraphics[width=16cm]{figuras/class_diagram_prototype}
+    \caption{Diagrama de classe do protótipo }
+    \label{figura:class_diagram_prototype}
+  \end{figure}
 
   \subsection{Configuração do Ambiente de Desenvolvimento}
   \label{subsec:configambiente}
@@ -193,11 +231,8 @@ respectivamente.
   % Mostrar banco inicializado
   % Mostrar setup do wade e amuse
 
-  TODO
-
-  \subsection{Integração Entre Plataformas}
-  \label{subsec:integracaoplataformas}
-  TODO
+  % \subsection{Integração Entre Plataformas}
+  % \label{subsec:integracaoplataformas}
 
 \section{Considerações Finais do Capítulo}
 
