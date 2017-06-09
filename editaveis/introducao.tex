@@ -5,60 +5,68 @@ Jogos \textit{multiplayer} atraem pessoas de diversos grupos sociais e faixas et
 estão cada vez mais acessíveis. Já é possível imergir em um ambiente virtual através de aplicativos para \textit{smartphones}. Com a
 redução dos preços desses aparelhos, diversos usuários e desenvolvedores foram atraídos para a área de \textit{Mobile Social Games}.
 
-Neste capítulo será apresentado o contexto de inserção, e tópicos de maior
-relevância a esse projeto. A separação dos tópicos é apresentada através da
-contextualização, justificativa, questão de pesquisa e objetivos.
+Neste capítulo, será apresentado o contexto de interesse desse trabalho, e
+tópicos de maior relevância a esse projeto. A separação dos tópicos é
+apresentada através de contextualização, justificativa, questão de pesquisa e
+objetivos. Por fim, tem-se a organização da monografia.
 
 
 \section{Contextualização}
 
-Todos os dias, milhões de pessoas interagem entre si em ambientes virtuais conhecidos como
-\textit{Massively- Multiplayer Online Role-Playing Games} (MMORPGs)\cite{nick2006}. As primeiras versões de MMORPGs eram baseadas em
-interações através de comandos de texto. Esse primeiro estilo de MMORPG era conhecido como \textit{Multi-User Dungeons} (MUDs)\cite{edward1997}.
-O menor custo de produção de dispositivos com maior capacidade de processamento, e conexões de internet mais velozes,
-possibilitou que interfaces gráficas fossem adicionadas a tais jogos. No entanto, uma característica se manteve durante a evolução desses jogos,
+Todos os dias, milhões de pessoas interagem entre si em ambientes virtuais
+conhecidos como
+\textit{Massively- Multiplayer Online Role-Playing Games}
+(MMORPGs) \cite{nick2006}. As primeiras versões de MMORPGs eram baseadas em
+interações através de comandos de texto. Esse primeiro estilo de MMORPG era
+conhecido como \textit{Multi-User Dungeons} (MUDs) \cite{edward1997}.
+O menor custo de produção de dispositivos com maior capacidade de
+processamento, e conexões de internet mais velozes,
+possibilitaram que interfaces gráficas fossem adicionadas a tais jogos. No
+entanto, uma característica se manteve durante a evolução desses jogos,
 as interações sociais entre os jogadores.
 
-As relações sociais oriundas de tais jogos se tornaram mais fáceis através da popularização de redes sociais, como Facebook e GooglePlus.
+As relações sociais oriundas de tais jogos tornaram-se mais fáceis através da popularização de redes sociais, como Facebook e GooglePlus.
 Inúmeros \textit{Social Games} utilizam-se das conexões presentes nessas redes para proporcionar uma maneira mais fácil de interação entre
-os usuários. Jogos como Clash of Clans\cite{clashOfClans} e Candy Crush Saga\cite{candyCrush} utilizam-se de tais redes sociais para facilitar
+os usuários. Jogos como Clash of Clans \cite{clashOfClans} e Candy Crush Saga\cite{candyCrush} utilizam-se de tais redes sociais para facilitar
 o encontro de jogadores.
 
-Ambos os jogos mencionados anteriormente são classificados como \textit{Social Games}. \textit{Social game} é um jogo \textit{online} que utiliza servi\c{c}os de redes sociais\cite{park2012}.
+Ambos os jogos mencionados anteriormente são classificados como \textit{Social Games}. \textit{Social game} é um jogo \textit{online} que utiliza servi\c{c}os de redes sociais \cite{park2012}.
 Esses serviços são utilizados para obter dados referentes aos diferentes tipos de conexões entre os usuários. Tais redes sociais podem ser de terceiros,
 como as citadas anteriormente, ou podem ser gerenciadas pela própria empresa. A partir dessas observações, é possivel notar que
-jogos \textit{online} são cada vez mais interações sociais do que experi\^encias individuais\cite{king2003}.
+jogos \textit{online} são cada vez mais interações sociais do que experi\^encias individuais \cite{king2003}.
 
 \textit{Social games} podem ser divididos em dois grandes grupos, \textit{mobile} e \textit{desktop}. Existem diferen\c{c}as entre \textit{Social Games} de dispositivos \textit{mobile} e \textit{Social Games} de computadores pessoais.
 Ao contrário dos \textit{Social Games} de computadores pessoais, \textit{Mobile Social Games} são restringidos por limita\c{c}\~oes de \textit{hardware} e plataformas de \textit{software}, questões
-referentes à usabilidade, entre outros\cite{yamakani2011}.
+referentes à usabilidade, entre outros \cite{yamakani2011}.
 
 Através de observações das restrições existentes em \textit{Mobile Social Games}, foi levantada a possibilidade de aplicação do paradigma MultiAgentes
 no seu desenvolvimento. Os sistemas MultiAgentes são sistemas
 compostos por múltiplos elementos computacionais que interagem entre si, conhecidos como agentes \cite{wooldridge2009}.
 Uma das vantagens na utilização de agentes é que eles provêem características que proporcionam comunicação dinâmica em
-grupos grandes de usuários\cite{bergenti2015}. Agentes também são componentes de software que podem ser reutilizáveis, reduzindo o tempo de
-implementação\cite{bergentiHuhns2014}.
+grupos grandes de usuários \cite{bergenti2015}. Agentes também são componentes de software que podem ser reutilizáveis, reduzindo o tempo de
+implementação \cite{bergentiHuhns2014}.
 
 De acordo com o levantamento bibliográfico realizado, foi possível a identificação de uma única proposta de aplicação do paradigma MultiAgentes no contexto de \textit{Mobile Social Games}. Tal proposta refere-se ao \textit{framework} AMUSE (\textit{Agent-based Multi-User Social Environment})
 \cite{amuse}. O AMUSE é uma plataforma de código aberto, ainda em desenvolvimento, para \textit{Social Games}.
-Ela possui o formato PaaS (\textit{Platform as a Service})\cite{bergenti2015}, uma ferramenta que possibilita provedores de serviço,
+Ela possui o formato PaaS (\textit{Platform as a Service}) \cite{bergenti2015}, uma ferramenta que possibilita provedores de serviço,
 como jogos e comunidades de portais, a reduzir da carga de implementação de funcionalidades
-comuns a vários jogos\cite{bergenti2015}.
+comuns a vários jogos \cite{bergenti2015}.
 
 \section{Justificativa}
 
 A decisão de trabalhar uma abordagem MultiAgentes em \textit{Mobile Social Games} foi instigada devido às características desse paradigma,
-dentre as quais destaca-se o fato dos Sistemas MultiAgentes proporcionarem melhorias na dinâmica da coordenação de grandes grupos
-de usuários, permitindo a redução de tempo no desenvolvimento da solução. Tal fato é evidenciado pelos autores Fabio Bellifemine, Giovanni Caire e Dominic Greenwood
-\cite{fabio2007}. Adicionalmente, tem-se que a redução de tempo de
+dentre as quais destaca-se o fato dos Sistemas MultiAgentes proporcionarem
+melhorias na dinâmica da coordenação de grandes grupos
+de usuários, permitindo a redução de tempo no desenvolvimento da solução. Tal
+fato é evidenciado pelos autores Fabio Bellifemine, Giovanni Caire e Dominic
+Greenwood \cite{fabio2007}. Adicionalmente, tem-se que a redução de tempo de
 desenvolvimento corresponde à uma característica desejada para produção de
-software\cite{bergenti2015}.
+software \cite{bergenti2015}.
 
 Outras características presentes no paradigma
-MultiAgentes, e pertinentes a proposta de um trabalho no contexto de
+MultiAgentes, e pertinentes à proposta de um trabalho no contexto de
 \textit{Social Games} são: autonomia, adaptabilidade, flexibilidade,
-assíncronismo, colaboração e proatividade\cite{bergenti2015}.
+assincronismo, colaboração e proatividade \cite{bergenti2015}.
 
 
 \section{Questão de Pesquisa}
@@ -79,7 +87,7 @@ Esta seção define os objetivos geral e específicos referentes ao trabalho.
         Os objetivos específicos abordados por esse TCC são:
 
         \begin{itemize}
-          \item Realizar uma revisão bibliográfica visando identificar problemas comumente encontrados no desenvolvimento de \textit{Mobile Social Games} (assíncronos);
+          \item Realizar uma revisão bibliográfica, visando identificar problemas comumente encontrados no desenvolvimento de \textit{Mobile Social Games} (assíncronos);
           \item Acordar soluções candidatas - orientadas a Sistemas MultiAgentes - para lidar com os problemas identificados no objetivo anterior;
           \item Realizar prova de conceito, a qual será baseada em ciclos evolutivos de desenvolvimento, seguidos de pesquisa-ação;
           \item Compilar os resultados obtidos ao longo do processo investigativo usando uma abordagem híbrida quantitativa e qualitativa;
@@ -92,8 +100,8 @@ Esse TCC está organizado em seis capítulos, sendo este primeiro a Introdução
 
   \begin{itemize}
     \item \textbf{Referencial Teórico:} este capítulo explana sobre conceitos relevantes aos domínios de \textit{Mobile Social Games}, Engenharia de Software e Sistemas MultiAgentes;
-    \item \textbf{Suporte Tecnológico:} explica sobre as tecnologias que serão utilizadas nesse trabalho para suporte e desenvolvimento da prova de conceito. Tais tecnologias são \textit{frameworks}, sistemas operacionais, ferramentas de controle de versão, entre outras;
-    \item \textbf{Metodologia:} descreve a modalidade de pesquisa que será utilizada, o planejamento e a descrição das atividades que serão realizadas, e o cronograma do trabalho;
+    \item \textbf{Suporte Tecnológico:} explica sobre as tecnologias que serão utilizadas nesse trabalho para apoio ao planejamento, gerenciamento e desenvolvimento. Tais tecnologias são \textit{frameworks}, sistemas operacionais, ferramentas de controle de versão, entre outras;
+    \item \textbf{Metodologia:} descreve a modalidade de pesquisa que será utilizada, o planejamento e a descrição das atividades que serão realizadas, prova de conceito, e o cronograma do trabalho;
     \item \textbf{Proposta:} acorda detalhes da proposta de pesquisa e desenvolvimento desse trabalho;
     \item \textbf{Resultados Obtidos:} apresenta os resultados obtidos até o momento, e as futuras atividades a serem executadas.
   \end{itemize}
