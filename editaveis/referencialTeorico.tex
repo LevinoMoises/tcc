@@ -2,37 +2,68 @@
 
 Este capítulo apresenta conceitos pertinentes aos tópicos de maior relevância
 abordados nesse TCC. Os tópicos abordados são apresentados através das seções:
-seção \ref{sec:refmobilesocialgames}, apresenta a base teórica referêncial
+seção \ref{sec:refmobilesocialgames}, acorda a base teórica
 de \textit{Mobile Social Games}; seção \ref{sec:refengdesoftware},
-apresenta o referencial teórico de Engenharia de Software; seção
+descreve o referencial teórico de Engenharia de Software; seção
 \ref{sec:refsistemasmultiagentes}, apresenta a base teórica de
 Sistemas MultiAgentes.
 
 \section{Mobile Social Games}
 \label{sec:refmobilesocialgames}
 
-A área de \textit{Mobile Social Games} possui diversos jogos com os mais variados estilos.
-Esses estilos podem ser subdivididos em dois grandes grupos: \textit{Hard-Core Games} e \textit{Casual Games}. Ambos possuem características em comum que os definem como \textit{Social Games}, mas também possuem peculiaridades referentes ao tipo de interação social presente no jogo. Os \textit{Hard-Core Games} são caracterizados por serem ambientes de extrema interação social, onde diversas oportunidades para criação de laços de amizade são presentes \cite{cole2007}. \textit{Casual Games}, por outro lado, apresentam interações mais casuais em que laços de amizade são mais fracos \cite{ricchetti2015}.
+A área de \textit{Mobile Social Games} possui diversos jogos com os mais
+variados estilos. Esses estilos podem ser subdivididos em dois grandes grupos:
+\textit{Hard-Core Games} e \textit{Casual Games}. Ambos possuem
+características em comum que os definem como \textit{Social Games}, mas também
+possuem peculiaridades referentes ao tipo de interação social presente no
+jogo. Os \textit{Hard-Core Games} são caracterizados por serem ambientes de
+extrema interação social, onde diversas oportunidades para criação de laços de
+amizade são presentes \cite{cole2007}. \textit{Casual Games}, por outro lado,
+apresentam interações mais casuais em que laços de amizade são mais fracos
+\cite{ricchetti2015}.
 
     \subsection{Definição de Mobile Social Games}
-Existem diversas definições para \textit{Social Game}, entretanto, todas possuem características semelhantes. De acordo com os autores Bergenti, Caire, Gotta, Park e Lee, \textit{Social Game} é todo o jogo que utiliza uma plataforma, ou serviços, de uma rede social \cite{bergenti2013} \cite{park2012}. Fields define que \textit{Social Game} é um jogo em que as interações entre usuários ajudam na adoção e manutenção de jogadores conectados através de uma rede social externa, facilitando o alcance desses objetivos \cite{fields2014}. Já Matt Ricchetti faz uma definição mais social. Ele define \textit{Social Game} como sendo uma comunidade que possui várias interações presentes em relações sociais, tais como: competição, colaboração, rebelião, inveja e compaixão \cite{ricchetti2015}.
+Existem diversas definições para \textit{Social Game}. Entretanto, todas
+possuem características semelhantes. De acordo com os autores Bergenti, Caire,
+Gotta, Park e Lee \cite{bergenti2013} \cite{park2012}, \textit{Social Game} é
+todo o jogo que utiliza uma plataforma, ou serviços, de uma rede social.
+Fields \cite{fields2014} define que \textit{Social Game} é um jogo em que as
+interações entre usuários ajudam na adoção e manutenção de jogadores
+conectados através de uma rede social externa, facilitando o alcance desses
+objetivos. Já Matt Ricchetti \cite{ricchetti2015} faz uma definição mais
+social. Ele define \textit{Social Game} como sendo uma comunidade que possui
+várias interações presentes em relações sociais, tais como: competição,
+colaboração, rebelião, inveja e compaixão.
 
-Matt Ricchetti vai além, e também define três características para divisão de \textit{Social Games}. Essas características são baseadas no tipo de interação social e sincronia do jogo \cite{ricchetti2015}. As três características relativas a \textit{Social Games} são:
+Matt Ricchetti \cite{ricchetti2015} vai além, e também define três características para divisão de \textit{Social Games}. Essas características são baseadas no tipo de interação social e sincronia do jogo. As três características relativas a \textit{Social Games} são:
 
 \begin{itemize}
   \item Interação síncrona vs assíncrona entre usuários. As interações ocorrem simultaneamente em tempo real, ou em tempos diferentes, em um estilo de turnos?;
-  \item Formação simétrica vs assimétrica de relações socias. Formar uma relação social requer entrada de dados de ambos os participantes, ou pode ser formada de maneira unilateral?;
-  \item Laço forte ou fraco na formação de relações sociais. As relações sociais tendem a ser fortes e duradouras, ou tendem a ser fracas e transitórias?
+  \item Formação simétrica vs assimétrica de relações sociais. Formar uma relação social requer entrada de dados de ambos os participantes, ou pode ser formada de maneira unilateral?;
+  \item Laço forte vs fraco na formação de relações sociais. As relações sociais tendem a ser fortes e duradouras, ou tendem a ser fracas e transitórias?
 \end{itemize}
 
 As três definições apresentadas são complementares e utilizadas em conjunto
-durante esse trabalho (As características alvo desse trabalho são descritas no
-capítulo \ref{chapter:proposta}).
-Por sua vez, \textit{Mobile Social Games} se refere a \textit{Social Games} que são desenvolvidos para plataformas \textit{mobile}, como Android, iOS e Windows Phone.
+durante esse trabalho. As características alvo desse trabalho são descritas no
+capítulo \ref{chapter:proposta}.
+Por sua vez, \textit{Mobile Social Games} refere-se a \textit{Social Games} que são desenvolvidos para plataformas \textit{mobile}, como Android, iOS e Windows Phone.
 
   \subsection{Perspectiva Histórica de Mobile Social Games}
 
-Os primeiros \textit{Social Games}, assim como os demais jogos de computador, eram bastante simples. Suas interfaces gráficas eram simuladas por texto e a quantidade de opções disponíveis eram limitadas. As primeiras versões de \textit{Social Games} são conhecidas como \textit{Multi-User Dungeons} (MUDs)\cite{edward1997}. Os MUDs possuiam seu estilo de jogo baseado em turnos, mas também permitiam que usuários interagissem de maneira síncrona ou assíncrona, em ambientes com diversas temáticas, desde guerra no espaço, até o velho oeste americano. Os MUDs eram executados em redes sociais conhecidas como \textit{Bulletin Board Systems} (BBS), redes sociais baseadas em sistemas de texto que permitiam a interação entre usuários através de uma rede de telefone \cite{fields2014}. \textit{Trade Wars}, Figura \ref{figura:tradeWars}, é um exemplo de MUD executado em BBS. O \textit{Trade Wars} foi lançado em 1984 e possuia a temática de guerra no espaço. Nesse jogo, os usuários podiam competir e formar alianças para conquistar recursos.
+Os primeiros \textit{Social Games}, assim como os demais jogos de computador,
+eram bastante simples. Suas interfaces gráficas eram simuladas por texto e a
+quantidade de opções disponíveis eram limitadas. As primeiras versões de
+\textit{Social Games} são conhecidas como \textit{Multi-User Dungeons}
+(MUDs)\cite{edward1997}. Os MUDs possuíam seu estilo de jogo baseado em turnos,
+mas também permitiam que usuários interagissem de maneira síncrona ou
+assíncrona, em ambientes com diversas temáticas, desde guerra no espaço, até o
+velho oeste americano. Os MUDs eram executados em redes sociais conhecidas como
+\textit{Bulletin Board Systems} (BBS). Tais redes sociais são baseadas em
+sistemas de texto que permitiam a interação entre usuários através de uma rede
+de telefone \cite{fields2014}. \textit{Trade Wars}, Figura
+\ref{figura:tradeWars}, é um exemplo de MUD executado em BBS. O \textit{Trade
+Wars} foi lançado em 1984 e possuia a temática de guerra no espaço. Nesse jogo,
+os usuários podiam competir e formar alianças para conquistar recursos.
 
 \begin{figure}[h]
   \centering
@@ -41,11 +72,31 @@ Os primeiros \textit{Social Games}, assim como os demais jogos de computador, er
   \label{figura:tradeWars}
 \end{figure}
 
-A redução no custo de produção de dispositivos com maior capacidade de processamento, e conexões de internet mais velozes e estáveis, permitiu que interfaces gráficas em nível 2D e 3D, e o acesso aos \textit{Social Games} fossem expandidos em diversas plataformas, como \textit{PC} e \textit{Mobile}.
+A redução no custo de produção de dispositivos com maior capacidade de
+processamento, e conexões de internet mais velozes e estáveis, permitiu que
+interfaces gráficas em nível 2D e 3D, e o acesso aos \textit{Social Games}
+fossem expandidos em diversas plataformas, como \textit{PC} e \textit{Mobile}.
 
-A evolução dos MUDs conduziu ao desenvolvimento dos \textit{Massively- Multiplayer Online Role-Playing Games} (MMORPGs). Os MMORPGs possuem características que os definem como \textit{Social Games}. Nesse estilo de jogo, é possível a troca de mensagens entre usuários através de uma rede interna, e muitas vezes externa, \textit{chat} em tempo real, formação de grupos para cooperação e vários outros estilos de organizações sociais \cite{fields2014}.
+A evolução dos MUDs conduziu ao desenvolvimento dos \textit{Massively-
+Multiplayer Online Role-Playing Games} (MMORPGs). Os MMORPGs possuem
+características que os definem como \textit{Social Games}. Nesse estilo de
+jogo, é possível a troca de mensagens entre usuários através de uma rede
+interna, e muitas vezes externa, \textit{chat} em tempo real, formação de
+grupos para cooperação e vários outros estilos de organizações sociais
+\cite{fields2014}.
 
-Um dos MMORPG de maior sucesso para a plataforma PC é o \textit{World of Warcraft}, Figura \ref{figura:wow}. O \textit{World of Warcraft} foi desenvolvido pela \textit{Blizzard Entertainment} em 2004, e possui, até o momento da escrita desse trabalho, o título de MMORPG mais rentável da história \cite{thurau2010} \cite{omer2015}. \textit{World of Warcraft} é baseado em um mundo medieval de fantasias, no qual os jogadores controlam personagens que podem evoluir de nível, desenvolver habilidades, participar de guerras, entre outras atividades. As atividades sociais do \textit{World of Warcraft} são constantes no jogo. Jogadores interagem em ações de dança, festas, grupos de \textit{chat} e formação de grupos para tarefas que não são possíveis de maneira individual, como conquista de itens especiais \cite{thurau2010} \cite{nardi2006}.
+Um dos MMORPG de maior sucesso para a plataforma PC é o \textit{World of
+Warcraft}, Figura \ref{figura:wow}. O \textit{World of Warcraft} foi
+desenvolvido pela \textit{Blizzard Entertainment}$^{\tiny{©}}$
+em 2004, e possui, até o momento da escrita desse trabalho, o título de MMORPG
+mais rentável da história \cite{thurau2010} \cite{omer2015}. \textit{World of
+Warcraft} é baseado em um mundo medieval de fantasias, no qual os jogadores
+controlam personagens que podem evoluir de nível, desenvolver habilidades,
+participar de guerras, entre outras atividades. As atividades sociais do
+\textit{World of Warcraft} são constantes no jogo. Jogadores interagem em
+ações de dança, festas, grupos de \textit{chat} e formação de grupos para
+tarefas que não são possíveis de maneira individual, como conquista de itens
+especiais \cite{thurau2010} \cite{nardi2006}.
 
 \begin{figure}[h]
   \centering
@@ -54,22 +105,65 @@ Um dos MMORPG de maior sucesso para a plataforma PC é o \textit{World of Warcra
   \label{figura:wow}
 \end{figure}
 
-Os MMORPG começaram na plataforma \textit{mobile} em 2003 com o lançamento do TibiaME, versão \textit{mobile} do MMORPG Tibia para PC \cite{tibiaME}. O TibiaME é um MMORPG no estilo de fantasia medival em que os jogadores podem evoluir o nível dos seus personagens, participar de guerras e grupos sociais. As versões iniciais do TibiaME eram destinadas aos primeiros dispositivos móveis com suporte para J2ME (\textit{Java 2 Platform, Micro Edition}) \cite{tibiaMEhistory}. As primeiras versões possuiam gráficos em 2D, Figura \ref{figura:tibiaME}, devido as restrições de hardware presentes nos primeiros \textit{smartphones}, e necessitavam de acesso constante a internet, sendo essa realizada inicialmente através das primeiras redes 2G.
+Os MMORPG começaram na plataforma \textit{mobile} em 2003 com o lançamento do
+TibiaME, versão \textit{mobile} do MMORPG Tibia para PC \cite{tibiaME}. O
+TibiaME é um MMORPG no estilo de fantasia medival em que os jogadores podem
+evoluir o nível dos seus personagens, participar de guerras e grupos sociais.
+As versões iniciais do TibiaME eram destinadas aos primeiros dispositivos
+móveis com suporte para J2ME (\textit{Java 2 Platform, Micro Edition})
+\cite{tibiaMEhistory}. As primeiras versões possuiam gráficos em 2D, Figura
+\ref{figura:tibiaME}, devido às restrições de hardware presentes nos primeiros
+\textit{smartphones}, e necessitavam de acesso constante à internet, sendo
+essa realizada inicialmente através das primeiras redes 2G.
 
-A evolução do hardware em \textit{smartphones}, novas plataformas, redes móveis mais estáveis e velozes, e paralelamente a criação de novas redes sociais, como o \textit{Facebook}, possibilitou o desenvolvimento e melhoria de vários novos tipos de \textit{Mobile Social Games}, além dos MMORPGs \cite{fields2014}. Alguns desses estilos de \textit{Mobile Social Games} são: \textit{Turn-Based Building Games}, \textit{Simulation Games}, \textit{Virtual Worlds}, \textit{Non-Persistent Action and RTS Games} e \textit{Online Trading Card Games} \cite{fields2014}. Atualmente, vários \textit{Mobile Social Games} estão disponíveis em lojas de aplicativos de todas as grandes plataformas, entre elas: Google Play, Apple Store e Windows Phone Store.
+A evolução do hardware em \textit{smartphones}, novas plataformas, redes
+móveis mais estáveis e velozes, e paralelamente a criação de novas redes
+sociais, como o \textit{Facebook}, possibilitaram o desenvolvimento e a
+melhoria de vários novos tipos de \textit{Mobile Social Games}, além dos
+MMORPGs \cite{fields2014}. Alguns desses estilos de \textit{Mobile Social
+Games} são: \textit{Turn-Based Building Games}, \textit{Simulation Games},
+\textit{Virtual Worlds}, \textit{Non-Persistent Action and RTS Games} e
+\textit{Online Trading Card Games} \cite{fields2014}. Atualmente, vários
+\textit{Mobile Social Games} estão disponíveis em lojas de aplicativos de
+todas as grandes plataformas, entre elas: Google Play$^{\tiny{®}}$, Apple
+Store$^{\tiny{®}}$ e Windows Phone Store$^{\tiny{®}}$.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=5cm]{figuras/tibiaME}
-  \caption{TibiaME. Primeiro MMORPG para plataforma \textit{Mobile} \cite{tibiaMEhistory}}
+  \caption{TibiaME$^{\tiny{®}}$. Primeiro MMORPG para plataforma \textit{Mobile} \cite{tibiaMEhistory}}
   \label{figura:tibiaME}
 \end{figure}
 
   \subsection{Problemas Ligados a Mobile Social Games}
 
-Os \textit{smartphones} são dispositivos que estão presentes no cotidiano das pessoas. Os mesmos são produzidos por diferentes empresas, possuem sistemas operacionais distintos, tamanhos de telas variados, dentre outras especificações de hardware e software. Essa essência portátil, fragmentação de sistemas operacionais e hardware, rede móvel precária e capacidade de processamento menor que computadores pessoais, são raízes de vários problemas encontrados em \textit{Mobile Social Games}.
+Os \textit{smartphones} são dispositivos que estão presentes no cotidiano das
+pessoas. Os mesmos são produzidos por diferentes empresas, possuem sistemas
+operacionais distintos, tamanhos de telas variados, dentre outras
+especificações de hardware e software. Essa essência portátil, fragmentação de
+sistemas operacionais e hardware, rede móvel precária e capacidade de
+processamento menor que computadores pessoais, são raízes de vários problemas
+encontrados em \textit{Mobile Social Games}.
 
-De acordo com o \textit{International Data Corporation}, o \textit{marketshare} de sistemas operacionais para \textit{smartphones} é amplamente ocupado pelo Android \cite{idc}. No segundo quadrimestre de 2015, o sistema operacional Android possuia 82.8\% do mercado de \textit{smartphones}, enquanto que o segundo maior sistema operacional, Apple iOS, possuia apenas 13.9\% do mercado \cite{idc}, conforme Figura \ref{figura:market_share}. Esses dados poderiam indicar uma maior facilidade para o desenvolvimento de aplicativos para \textit{smartphones}, dado que a maior parte dos dispositivos possui o sistema operacional Android. No entanto, essa análise é incorreta. Mesmo possuindo um \textit{marketshare} muito inferior ao Android, o iOS ainda gera uma receita maior que o seu concorrente \cite{appAnnie}. Essa característica faz com que desenvolvedores foquem em ambas as plataformas, visto a oportunidade de geração de receita. Outro problema relacionado ao Android é a sua própria fragmentação, vide Figura \ref{figura:android_chart}. Dados da própria Google demonstram a existência de várias versões do Android, tamanhos de telas e suporte a diferentes versões de \textit{engines} de vídeo \cite{dashboardGoogle}. Todas essas diferenças aumentam os custos e dificultam a criação de \textit{Mobile Social Games} que sejam compatíveis com a maior parte do mercado.
+De acordo com o \textit{International Data Corporation} \cite{idc}, o
+\textit{marketshare} de sistemas operacionais para \textit{smartphones} é
+amplamente ocupado pelo Android. No segundo quadrimestre de 2015, o sistema
+operacional Android possuia 82.8\% do mercado de \textit{smartphones}, enquanto
+que o segundo maior sistema operacional, Apple iOS, possuia apenas 13.9\% do
+mercado \cite{idc}, conforme Figura \ref{figura:market_share}. Esses dados
+poderiam indicar uma maior facilidade para o desenvolvimento de aplicativos
+para \textit{smartphones}, dado que a maior parte dos dispositivos possui o
+sistema operacional Android. No entanto, essa análise é incorreta. Mesmo
+possuindo um \textit{marketshare} muito inferior ao Android, o iOS ainda gera
+uma receita maior que o seu concorrente \cite{appAnnie}. Essa característica
+faz com que desenvolvedores foquem em ambas as plataformas, visto a
+oportunidade de geração de receita. Outro problema relacionado ao Android é a
+sua própria fragmentação, vide Figura \ref{figura:android_chart}. Dados da
+própria Google demonstram a existência de várias versões do Android, tamanhos
+de telas e suporte a diferentes versões de \textit{engines} de vídeo
+\cite{dashboardGoogle}. Todas essas diferenças aumentam os custos e dificultam
+a criação de \textit{Mobile Social Games} que sejam compatíveis com a maior
+parte do mercado.
 
 \begin{figure}[h]
   \centering
@@ -87,7 +181,14 @@ De acordo com o \textit{International Data Corporation}, o \textit{marketshare} 
 
   \subsection{Mercado de Mobile Social Games}
 
-\textit{Mobile Games} tornaram-se uma das mais importantes plataformas para jogadores e desenvolvedores de jogos. O mercado de \textit{Mobile Games} demonstra crescimento contínuo e números expressivos. Na Figura \ref{figura:gmgcMarket}, é possível analisar que em 2014, o mercado de \textit{Mobile Games} apresentou um aumento de receita de 33\% e 55\%, em \textit{smartphones} e \textit{tablets}, respectivamente. Em 2017, a perspectiva é que \textit{Mobile Games} serão responsáveis por 38\% do mercado global de jogos e receita prevista de \$40.4 bilhões de dólares \cite{gmgc}.
+\textit{Mobile Games} tornaram-se uma das mais importantes plataformas para
+jogadores e desenvolvedores de jogos. O mercado de \textit{Mobile Games}
+demonstra crescimento contínuo e números expressivos. Na Figura
+\ref{figura:gmgcMarket}, é possível analisar que em 2014, o mercado de
+\textit{Mobile Games} apresentou um aumento de receita de 33\% e 55\%, em
+\textit{smartphones} e \textit{tablets}, respectivamente. Em 2017, a
+perspectiva é que \textit{Mobile Games} serão responsáveis por 38\% do mercado
+global de jogos e receita prevista de \$40.4 bilhões de dólares \cite{gmgc}.
 
 \begin{figure}[h]
   \centering
@@ -96,7 +197,12 @@ De acordo com o \textit{International Data Corporation}, o \textit{marketshare} 
   \label{figura:gmgcMarket}
 \end{figure}
 
-O mercado de \textit{Mobile Games} está em constante crescimento e possui características que estão sendo analisadas para o mapeamento dos motivos para o seu sucesso. Fields \cite{fields2014} revela algumas características interessantes do mercado de \textit{Mobile Gaming} nos Estados Unidos da América. Essas características são referentes a distribuição demográfica no ano de 2013 \cite{fields2014}:
+O mercado de \textit{Mobile Games} está em constante crescimento e possui
+características que estão sendo analisadas para o mapeamento dos motivos para
+o seu sucesso. Fields \cite{fields2014} revela algumas características
+interessantes do mercado de \textit{Mobile Gaming} nos Estados Unidos da
+América. Essas características são referentes à distribuição demográfica no
+ano de 2013 \cite{fields2014}:
 
 \begin{itemize}
   \item As mulheres representam 53\% dos usuários do mercado de \textit{Mobile Games};
@@ -105,7 +211,13 @@ O mercado de \textit{Mobile Games} está em constante crescimento e possui carac
   \item 30\% dos jogadores jogam na cama, e 16\% no ônibus ou metrô.
 \end{itemize}
 
-A receita gerada pelo mercado de \textit{Mobile Games} possui números atraentes para os desenvolvedores, no entanto, a monetização de jogos não é uma tarefa fácil. Atrair usuários para o seu jogo em um mercado repleto de opções é uma tarefa difícil, especialmente quando se trata de uma empresa que está iniciando, ou de porte pequeno. Dado essas dificuldades, várias estratégias de monetização de \textit{Mobile Games} são utilizadas \cite{fields2014}:
+A receita gerada pelo mercado de \textit{Mobile Games} possui números
+atraentes para os desenvolvedores, no entanto, a monetização de jogos não é
+uma tarefa fácil. Atrair usuários para o seu jogo em um mercado repleto de
+opções é uma tarefa difícil, especialmente quando se trata de uma empresa que
+está iniciando, ou de porte pequeno. Dadas essas dificuldades, várias
+estratégias de monetização de \textit{Mobile Games} são utilizadas
+\cite{fields2014}:
 
 \begin{itemize}
   \item \textit{Premium download};
@@ -113,27 +225,73 @@ A receita gerada pelo mercado de \textit{Mobile Games} possui números atraentes
   \item \textit{Freemium}.
 \end{itemize}
 
-O modelo \textit{Premium download} caracteriza-se pela venda completa do jogo para o usuário. O usuário compra o jogo em uma \textit{app store}, como \textit{Google Play} e \textit{Amazon Appstore}, e obtém o jogo em sua completude, sem necessidade a de dispêndios futuros. Esse modelo é normalmente utilizado por estúdios e franquias que já possuem uma grande base de usuários, ou verba suficiente para atrair usuários através de ações publicitárias.
+O modelo \textit{Premium download} caracteriza-se pela venda completa do jogo
+para o usuário. O usuário compra o jogo em uma \textit{app store}, como
+\textit{Google Play}$^{\tiny{®}}$ e \textit{Amazon Appstore}$^{\tiny{®}}$, e
+obtém o jogo em sua completude, sem a necessidade de dispêndios futuros. Esse
+modelo é normalmente utilizado por estúdios e franquias que já possuem uma
+grande base de usuários, ou verba suficiente para atrair usuários através de
+ações publicitárias.
 
-O modelo \textit{Subscriptions} é baseado em assinaturas. O usuário recebe de maneira gratuita os primeiros meses do jogo, sendo necessária uma assinatura posterior para a continuação do jogo. Esse modelo é normalmente utilizado em jogos que necessitam de um grande processamento em \textit{back-end}, como os MMORPG. Esse modelo está em declínio devido ao crescimento de jogos de alta qualidade que utilizam o próximo modelo, o \textit{Freemium}.
+O modelo \textit{Subscriptions} é baseado em assinaturas. O usuário recebe de
+maneira gratuita os primeiros meses do jogo, sendo necessária uma assinatura
+posterior para a continuação do jogo. Esse modelo é normalmente utilizado em
+jogos que necessitam de um grande processamento em \textit{back-end}, como os
+MMORPG. Esse modelo está em declínio devido ao crescimento de jogos de alta
+qualidade que utilizam o próximo modelo, o \textit{Freemium}.
 
-O modelo \textit{Freemium} pode ser subdividido em várias categorias, todas com a mesma base: o jogo é gratuito. A monetização com esse modelo é feita através da venda de itens, serviços e propagandas dentro do jogo. Os usuários possuem a possibilidade de comprar itens para aumentar a velocidade de evolução no jogo, liberar áreas indisponíveis e retirar propagandas indesejadas através de pagamento.
+O modelo \textit{Freemium} pode ser subdividido em várias categorias, todas com
+a mesma base: o jogo é gratuito. A monetização com esse modelo é feita através
+da venda de itens, serviços e propagandas dentro do jogo. Os usuários possuem a
+possibilidade de comprar itens para aumentar a velocidade de evolução no jogo,
+liberar áreas indisponíveis e retirar propagandas indesejadas através de
+pagamento.
 
-Os modelos apresentados podem ser utilizados de maneira singular ou híbrida, o que é necessário, é a análise de qual, ou quais, modelos se adequam ao estilo de jogo implementado, tipo de público alvo, verba disponível para propaganda do jogo, entre outros fatores.
+Os modelos apresentados podem ser utilizados de maneira singular ou híbrida, o
+que é necessário, é a análise de qual, ou quais, modelos se adequam ao estilo
+de jogo implementado, tipo de público alvo, verba disponível para propaganda do
+jogo, entre outros fatores.
 
-Através dos dados apresentados, fica evidente que o mercado de \textit{Mobile Games} está em um momento de crescimento e geração de oportunidades para desenvolvedores independentes e empresas que já estão solidificadas no mercado de jogos. Novas técnicas, princípios, metodologias e paradigmas podem ser a solução para a melhoria do processo de desenvolvimento de \textit{Mobile Social Games}. O próxima seção aborda tópicos ligados à Engenharia de Software, como Sistemas MultiAgentes, que podem ser utilizados para abordar alguns dos problemas relatados.
+Através dos dados apresentados, fica evidente que o mercado de \textit{Mobile
+Games} está em um momento de crescimento e geração de oportunidades para
+desenvolvedores independentes e empresas que já estão solidificadas no mercado
+de jogos. Novas técnicas, princípios, metodologias e paradigmas podem ser a
+solução para a melhoria do processo de desenvolvimento de \textit{Mobile
+Social Games}. A próxima seção aborda tópicos ligados à Engenharia de
+Software, como Sistemas MultiAgentes, que podem ser utilizados para abordar
+alguns dos problemas relatados.
 
 \section{Engenharia de Software}
 \label{sec:refengdesoftware}
 
-Dado os objetivos desse trabalho, faz-se necessário o embasamento teórico quanto aos aspectos associados à Engenharia de Software. Dentre elas está a utilização do paradigma MultiAgentes, testes unitários e automatizados para Sistemas MultiAgentes e para a plataforma \textit{mobile} escolhida e técnicas para análise de qualidade de código fonte.
+Dado os objetivos desse trabalho, faz-se necessário o embasamento teórico
+quanto aos aspectos associados à Engenharia de Software. Dentre elas está a
+utilização do paradigma MultiAgentes, testes unitários e automatizados para
+Sistemas MultiAgentes e para a plataforma \textit{mobile} escolhida e técnicas
+para análise de qualidade de código fonte.
 
   \subsection{Sistemas MultiAgentes}
   \label{sec:refsistemasmultiagentes}
 
-A visão baseada em agentes oferece suporte de ferramentas, técnicas, e metáforas visando melhorar a maneira como as pessoas conceitualizão e implementam diferentes produtos de software. Agentes são usados em uma variedade crescente de aplicações — desde sistemas pequenos, como filtros personalizados para emails, até grandes, complexos e críticos sistemas de controle aéreo \cite{jade}. À primeira vista, pode parecer que tais sistemas possuem pouco em comum. No entanto, esse não é o caso: em ambos, a abstração chave utilizada é a de agentes \cite{jennings1998}.
+A visão baseada em agentes oferece suporte de ferramentas, técnicas, e
+metáforas visando melhorar a maneira como as pessoas conceitualizam e
+implementam diferentes produtos de software. Agentes são usados em uma
+variedade crescente de aplicações — desde sistemas pequenos, como filtros
+personalizados para emails, até grandes, complexos e críticos sistemas de
+controle aéreo \cite{jade}. À primeira vista, pode parecer que tais sistemas
+possuem pouco em comum. No entanto, esse não é o caso: em ambos, a abstração
+chave utilizada é a de agentes \cite{jennings1998}.
 
-De acordo com Wooldridge, Sistemas MultiAgentes (SMA) são sistemas compostos por múltiplos elementos computacionais que interagem entre si, conhecidos como Agentes. Agentes são sistemas computacionais com duas importantes capacidades. Eles possuem, pelo menos em certo nível, capacidade de agirem de maneira autônoma, de decidirem por si mesmos o que eles precisam fazer para satisfazer os seus objetivos. Eles são capazes de interagir com outros agentes, não simplesmente compartilhando dados,  mas se envolvendo em atividades análogas às atividades sociais em que todos nós nos envolvemos diariamente: cooperação, coordenação, negociação, e similares \cite{wooldridge2009}. As características presentes em um Sistema MultiAgente são  \cite{jennings1998}:
+De acordo com Wooldridge, Sistemas MultiAgentes (SMA) são sistemas compostos
+por múltiplos elementos computacionais que interagem entre si, conhecidos como
+Agentes. Agentes são sistemas computacionais com duas importantes capacidades.
+Eles possuem, pelo menos em certo nível, capacidade de agirem de maneira
+autônoma, de decidirem por si mesmos o que eles precisam fazer para satisfazer
+os seus objetivos. Eles são capazes de interagir com outros agentes, não
+simplesmente compartilhando dados,  mas se envolvendo em atividades análogas às
+atividades sociais em que todos nós nos envolvemos diariamente: cooperação,
+coordenação, negociação, e similares \cite{wooldridge2009}. As características
+presentes em um Sistema MultiAgente são  \cite{jennings1998}:
 
 \begin{itemize}
   \item Cada agente possui uma informação incompleta, ou capacidade para resolver um problema, ou seja, cada agente tem uma visão limitada;
@@ -142,7 +300,10 @@ De acordo com Wooldridge, Sistemas MultiAgentes (SMA) são sistemas compostos po
   \item A computação é assíncrona.
 \end{itemize}
 
-Alguns dos motivos pelo interesse em SMA são: habilidade de prover robustez e eficiência; habilidade para permitir inter-operação entre sistemas legados; e habilidade para resolver problemas em que \textit{data}, \textit{expertise} ou controle são distribuídos \cite{jennings1998}.
+Alguns dos motivos pelo interesse em SMA são: habilidade de prover robustez e
+eficiência; habilidade para permitir inter-operação entre sistemas legados; e
+habilidade para resolver problemas em que \textit{data}, \textit{expertise} ou
+controle são distribuídos \cite{jennings1998}.
 
 As características e habilidades listadas anteriormente podem ser atingidas
 através de arquiteturas distintas de Sistemas MultiAgentes.
@@ -150,32 +311,56 @@ Essas arquiteturas são descritas e abordadas no próximo tópico.
 
     \subsubsection{Tipos de Arquiteturas Orientadas a Agentes}
 
-As arquiteturas de agentes são mecanismos fundamentais, subjacentes aos componentes autônomos, que permitem comportamento efetivo e dinâmico em um mundo real, e em ambientes abertos. As arquiteturas de agentes podem ser divididas em quatro grupos principais: baseados em lógica, reativos, crença-desejo-intenção(\textit{belief, desire, intention}), e em camadas (ou híbrida)\cite{fabio2007}.
+As arquiteturas de agentes são mecanismos fundamentais, subjacentes aos
+componentes autônomos, que permitem comportamento efetivo e dinâmico em um
+mundo real, e em ambientes abertos. As arquiteturas de agentes podem ser
+divididas em quatro grupos principais: baseados em lógica, reativos,
+crença-desejo-intenção(\textit{belief, desire, intention}), e em camadas (ou
+híbrida) \cite{fabio2007}.
 
-A arquitetura \textbf{baseada em lógica} possui sua fundação em técnicas conhecidas de sistemas tradicionais em que o ambiente é representado de forma simbólica e manipulado usando mecanismos de raciocínio\cite{fabio2007}.
+A arquitetura \textbf{baseada em lógica} possui sua fundação em técnicas
+conhecidas de sistemas tradicionais em que o ambiente é representado de forma
+simbólica e manipulado usando mecanismos de raciocínio \cite{fabio2007}.
 
-Arquiteturas \textbf{reativas} implementam a tomada de decisão como um mapeamento direto da situação para ação, baseando-se em estímulos desencadeados por sensores de dados. Ao contrário da arquitetura \textbf{baseada em lógica}, a arquitetura reativa não possue qualquer modelo simbólico central, e portanto, não utiliza qualquer raciocínio lógico simbólico complexo\cite{fabio2007}.
+Arquiteturas \textbf{reativas} implementam a tomada de decisão como um
+mapeamento direto da situação para ação, baseando-se em estímulos
+desencadeados por sensores de dados. Ao contrário da arquitetura
+\textbf{baseada em lógica}, a arquitetura reativa não possue qualquer modelo
+simbólico central, e portanto, não utiliza qualquer raciocínio lógico
+simbólico complexo \cite{fabio2007}.
 
-A arquitetura \textbf{crença-desejo-intenção}, ou BDI (\textit{belief, desire, intention}), é baseada em três estruturas: crença (\textit{belief}), que é o conhecimento que o agente possui do ambiente; desejo (\textit{desire}), que representa os objetivos que ele deve alcançar; e intenção,  que representa as tarefas a serem realizadas pelo agente, ou seja, planos estratégicos visando alcançar os objetivos desejados. (\textit{intention})\cite{fabio2007}.
+A arquitetura \textbf{crença-desejo-intenção}, ou BDI (\textit{belief, desire,
+intention}), é baseada em três estruturas: crença (\textit{belief}), que é o
+conhecimento que o agente possui do ambiente; desejo (\textit{desire}), que
+representa os objetivos que ele deve alcançar; e intenção,  que representa as
+tarefas a serem realizadas pelo agente, ou seja, planos estratégicos visando
+alcançar os objetivos desejados (\textit{intention}) \cite{fabio2007}.
 
-Por fim, a arquitetura em \textbf{camadas}, ou híbrida, permite tanto o comportamento reativo quanto o deliberativo. Para permitir essa flexibilidade, subsistemas são dispostos como camadas (horizontais e verticais) de maneira hierárquica para acomodar ambos os tipos de agentes \cite{fabio2007}.
+Por fim, a arquitetura em \textbf{camadas}, ou híbrida, permite tanto o
+comportamento reativo quanto o deliberativo. Para permitir essa flexibilidade,
+subsistemas são dispostos como camadas (horizontais e verticais) de maneira
+hierárquica para acomodar ambos os tipos de agentes \cite{fabio2007}. A próxima
+seção aborda aspectos relacionados à Testes de Software, como tipos de testes,
+e frameworks de teste aplicados ao contexto desse trabalho.
 
   \subsection{Testes de Software}
   \label{subsec:testedesoftware}
 
 Um dos objetivos desse trabalho é aprofundar os conhecimentos em Engenharia de
-Software, orientando-se por padrões arquiteturais, testes e técnicas para análise
-de qualidade de código fonte. Para isso é necessário a apresentação de
+Software, orientando-se por padrões arquiteturais, testes e técnicas para
+análise de qualidade de código fonte. Para isso, é necessária a apresentação de
 referências para o desenvolvimento da base teórica. Essas referências
 são apresentadas através das subseções: subseção \ref{subsec:testedesoftware},
-apresenta as bases teóricas para testes de software, com foco em testes unitários
-e de integração; subseção \ref{subsec:qualidadedesoftware} apresenta as bases
-teóricas de qualidade de software, com foco em métricas de qualidade de código
-fonte.
+apresenta as bases teóricas para testes de software, com foco em testes
+unitários e de integração; subseção \ref{subsec:qualidadedesoftware} apresenta
+as bases teóricas de qualidade de software, com foco em métricas de qualidade
+de código fonte.
 
-Teste de Software é um processo, ou uma série de processos, destinado(s) a certificar-se que o código de computador faça o que foi projetado para fazer, e inversamente, não faça algo não planejado\cite{myers2011}.
+Teste de Software é um processo, ou uma série de processos, destinado(s) a
+certificar-se que o código de computador faça o que foi projetado para fazer,
+e inversamente, não faça algo não planejado \cite{myers2011}.
 
-Myers define os seguintes princípios para o teste de Software\cite{myers2011}:
+Myers \cite{myers2011} define os seguintes princípios para o teste de Software:
 
 \begin{itemize}
   \item Testar é o processo de executar o programa com a intenção de encontrar erros;
@@ -186,28 +371,54 @@ Myers define os seguintes princípios para o teste de Software\cite{myers2011}:
   \item Um teste bem sucedido inclui estudar cuidadosamente os resultados obtidos.
 \end{itemize}
 
-Teste está presente em todos os estágios do ciclo de desenvolvimento de Software, mas é feito de uma maneira diferente em cada nível. Lu Luo define os seguintes níveis de teste \cite{luo2001}:
+Teste está presente em todos os estágios do ciclo de desenvolvimento de
+Software, mas é feito de uma maneira diferente em cada nível. Lu Luo
+\cite{luo2001} define os seguintes níveis de teste:
 
 \begin{itemize}
-  \item \textbf{Teste Unitário:} Teste feito no mais baixo nível. Testa as estruturas unitárias do software, que é a menor parte testável;
+  \item \textbf{Teste Unitário:} Teste feito no mais baixo nível. Testa as estruturas unitárias do software, que são as menores partes testáveis;
   \item \textbf{Teste de Integração:} É realizado quando duas ou mais unidades são combinadas em uma estrutura maior;
-  \item \textbf{Teste de Sistema:} Tende a afirmar a qualidade de todo o sistema. Esse teste é muitas vezes baseado em requisitos funcionais do sistema. Atributos de qualidade não funcionais também são verificados;
+  \item \textbf{Teste de Sistema:} Tende a afirmar a qualidade de todo o sistema. Esse teste é muitas vezes baseado em requisitos funcionais do sistema. Atributos de qualidade, tipicamente não funcionais, também são verificados;
   \item \textbf{Teste de Aceitação:} É um teste formal destinado a validar a aceitação do sistema diante da avaliação do usuário, cliente ou entidade autorizada.
 \end{itemize}
 
-Existem duas categorias de técnicas para teste de software. Diferentes técnicas revelam diferentes aspectos de qualidade do software. As categorias são funcional e estrutural. Os testes funcionais recebem dados de entrada, e sua saída é avaliada para análise da conformidade com o esperado. O teste estrutural também recebe dados de entrada e tem sua saída avaliada, porém a análise vai além, verificando a estrutura interna do sistema ou componente\cite{luo2001}.
+Existem duas categorias de técnicas para teste de software. Diferentes
+técnicas revelam diferentes aspectos de qualidade do software. As categorias
+são funcional e estrutural. Os testes funcionais recebem dados de entrada, e
+sua saída é avaliada para análise da conformidade com o esperado. O teste
+estrutural também recebe dados de entrada e tem sua saída avaliada, porém, a
+análise vai além, verificando a estrutura interna do sistema ou componente
+\cite{luo2001}.
 
-O teste funcional, ou caixa-preta, visualiza o sistema como uma caixa-preta. O objetivo não é verificar o comportamento interno ou estrutural, mas sim em quais circunstâncias o programa não se comporta como esperado\cite{myers2011}.
+O teste funcional, ou caixa-preta, visualiza o sistema como uma caixa-preta. O
+objetivo não é verificar o comportamento interno ou estrutural, mas sim em
+quais circunstâncias o programa não se comporta como esperado \cite{myers2011}.
 
-O teste estrutural, ou caixa-branca, permite examinar a estrutura interna do programa. Essa estratégia deriva testes através da lógica do programa. O objetivo é testar todos os caminhos possíveis de execução\cite{myers2011}.
+O teste estrutural, ou caixa-branca, permite examinar a estrutura interna do
+programa. Essa estratégia deriva testes através da lógica do programa. O
+objetivo é testar todos os caminhos possíveis de execução \cite{myers2011}.
 
   \subsection{Testes para Dispositivos Android}
 
-A plataforma Android inclui um \textit{framework} integrado que facilita o teste de todos os aspectos dos aplicativos. O SDK (\textit{Software Development Kit}) também fornece ferramentas para a configuração e execução dos testes.
+O Android SDK (\textit{Software Development Kit}) \cite{androidSdk}, fornece um
+conjunto de ferramentas para o desenvolvimento de aplicativos para a plataforma
+Android. Entre elas, um \textit{framework} integrado de testes. Esse
+\textit{framework} disponibiliza uma biblioteca de suporte para testes, ATSL
+(\textit{Android Testing Support Library}) \cite{atsl}, que facilita o
+desenvolvimento de testes para variados aspectos dos aplicativos.
 
     \subsubsection{O \textit{Framework} de Testes}
 
-O \textit{framework} de testes fornece as seguintes características: as \textit{suites} de teste são baseadas no JUnit \cite{junit2015}; as \textit{suites} de testes são contidas em pacotes de teste que são similares aos pacotes da aplicação; o \textit{framework} fornece extensões do JUnit para testes específicos do Android; o SDK pode ser utilizado através da IDE Eclipse ou por comandos de terminal, e o SDK fornece integração com o \textit{monkeyrunner}, uma API para testar dispositivos Android através de código Python.
+O \textit{framework} de testes possui como base dois módulos. Um módulo para
+testes locais na JVM (\textit{Java virtual machine}) \cite{java}, e outro para
+testes que precisam ser executados em um dispositivo Android, seja ele um
+emulador ou um dispositivo físico.
+O primeiro módulo do \textit{framework} de testes possui como objetivo o
+suporte e execução de testes unitários, utilizando como base o JUnit
+\cite{junit2015}. O segundo módulo possui como objetivo o suporte à testes de
+integração. O suporte para testes de integração é alcançado através da
+utilização de ferramentas externas, descritas no tópico XXX de
+ferramentas de suporte.
 
 \begin{figure}[H]
   \centering
@@ -216,38 +427,41 @@ O \textit{framework} de testes fornece as seguintes características: as \textit
   \label{figura:testes}
 \end{figure}
 
-A Figura \ref{figura:testes} resume a estrutura do \textit{framework} de testes. É possível ver que a estrutura de testes do Android é baseada no JUnit. Portanto, os testes são organizados em classes, pacotes e projeto. O \textit{framework} também disponibiliza um conjunto de métodos, \textit{InstrumentationTestRunner}, que permite a execução de componentes do Android sem as restrições dos ciclos de vida \cite{androidTesting2015}.
-
-O \textit{framework} disponibiliza um conjunto de ferramentas que podem ser utilizadas para diferentes tipos de teste. Como teste de interface gráfica (\textit{Espresso} e \textit{UI Automator}) e testes compatíveis com JUnit3 e JUnit4 (\textit{AndroidJUnitRunner}). Outra ferramenta disponível é o \textit{MonkeyRunner}, uma ferramenta que fornece a opção para criação de testes fora do escopo de código do aplicativo Android.
+A Figura \ref{figura:testes} resume a estrutura do \textit{framework} de
+testes. É possível ver que a estrutura de classes de testes do Android é
+baseada no JUnit. Portanto, os testes são organizados em classes, pacotes e
+projeto. O \textit{framework} também disponibiliza um conjunto de métodos,
+\textit{InstrumentationTestRunner}, que permite a execução de componentes do
+Android sem as restrições dos ciclos de vida \cite{androidTesting2015}.
 
 %Focar na plataforma JADE
 %Discutir sobre o add-on framework
-%Well, this is going to take a looooong time
 
   \subsection{Qualidade de Software}
   \label{subsec:qualidadedesoftware}
 
-No contexto de software, a qualidade é vista como um aglomerado de características
-que são alcançadas para que o resultado obtido no desenvolvimento
-atenda as necessidades do usuário, sendo elas explícitas ou não \cite{rocha2001}.
-As características de qualidade de software podem ser divididas em funcionais,
-e não funcionais. Características funcionais podem ser medidas através de métricas
-que possuem critérios objetivos, tornando possível a avaliação da qualidade \cite{meirelles2013}.
+No contexto de software, a qualidade é vista como um aglomerado de
+características que são alcançadas para que o resultado obtido no
+desenvolvimento atenda às necessidades do usuário, sendo elas explícitas ou não
+\cite{rocha2001}. As características de qualidade de software podem ser
+divididas em funcionais, e não funcionais. Características funcionais,
+normalmente, podem ser medidas através de métricas que possuem critérios
+objetivos, tornando possível a avaliação da qualidade \cite{meirelles2013}.
 
     \subsubsection{Métricas de Qualidade de Código Fonte}
 
-Métricas de software é um termo que envolve várias atividades para a definição de
-escalas e métodos que possuem como objetivo a identificação de parâmetros que afetam o
-desenvolvimento do software \cite{metrics}.
+Métricas de software é um termo que envolve várias atividades para a definição
+de escalas e métodos que possuem como objetivo a identificação de parâmetros
+que afetam o desenvolvimento do software \cite{metrics}.
 
-As métricas de software podem ser agrupadas em objetivas e subjetivas. As métricas
-objetivas possuem regras bem definidas, e possibilitam comparações posteriores.
-Enquanto que as métricas subjetivas podem alterar de acordo com o ator responsável
-pela sua coleta \cite{meirelles2013}.
+As métricas de software podem ser agrupadas em objetivas e subjetivas. As
+métricas objetivas possuem regras bem definidas, e possibilitam comparações
+posteriores. Enquanto que as métricas subjetivas podem alterar de acordo com o
+ator responsável pela sua coleta \cite{meirelles2013}.
 
-Métricas de código fonte objetivas possuem características que permitem o mapeamento
-dos seus resultados em intervalos para serem interpretados em uma fase de análise
-\cite{meirelles2013}. Alguns exemplos são:
+Métricas de código fonte objetivas possuem características que permitem o
+mapeamento dos seus resultados em intervalos para serem interpretados em uma
+fase de análise \cite{meirelles2013}. Alguns exemplos são:
 
 \begin{itemize}
   \item Número de atributos;
@@ -260,17 +474,19 @@ dos seus resultados em intervalos para serem interpretados em uma fase de análi
 
 \section{Considerações Finais do Capítulo}
 
-As várias particularidades ligadas a \textit{Mobile Social Games} evidenciam que este
-ambiente virtual possui diversas interações presentes no cotidiano das pessoas. Tal fato torna esse formato de jogo atrativo. A quantidade de
-jogadores com interesse nesse estilo é crescente, fazendo com que o mercado
-de \textit{Mobile Social Games} esteja em crescimento constante.
+As várias particularidades ligadas a \textit{Mobile Social Games} evidenciam
+que este ambiente virtual possui diversas interações presentes no cotidiano das
+pessoas. Tal fato torna esse formato de jogo atrativo. A quantidade de
+jogadores com interesse nesse estilo é crescente, fazendo com que o mercado e
+\textit{Mobile Social Games} esteja em crescimento constante.
 
-A aplicação do paradigma MultiAgentes se torna oportunua nesse contexto, dado que
+A aplicação do paradigma MultiAgentes torna-se oportuna nesse contexto, dado que
 expõe possíveis melhorias de Engenharia de Software. Dentre essas melhorias,
 destacam-se: autonomia, adaptabilidade e flexibilidade. Essas melhorias podem
-potencializar os ganhos em produtividade e redução de custos de desenvolvimento,
-visto que as abstrações são mais próximas às necessidades de Mobile Social Games.
+potencializar os ganhos em produtividade e redução de custos de
+desenvolvimento, visto que as abstrações são mais próximas às necessidades de
+Mobile Social Games.
 
 Por fim, esse capítulo listou boas práticas de Engenharia de Software, com foco
-em testes de software e qualidade de software. Essas boas práticas tornarão possível
-melhorias no contexto de desenvolvimento e Engenharia de Software.
+em testes de software e qualidade de software. Essas boas práticas tornarão
+possível melhorias no contexto de desenvolvimento e Engenharia de Software.
