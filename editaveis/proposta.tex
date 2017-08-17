@@ -1,26 +1,48 @@
 \chapter[Proposta]{Proposta}
 \label{chapter:proposta}
 
-A pesquisa exploratória realizada, e o referencial teórico levantado, expuseram a
-plataforma AMUSE como única ferramenta de desenvolvimento de \textit{Mobile Social Games}
-que utiliza uma abordagem MultiAgentes. Levando em consideração essa condição,
-características desejadas fornecidas pela plataforma, e objetivo desse trabalho, ela
-será a ferramenta base para o desenvolvimento.
+A pesquisa exploratória realizada, e o referencial teórico levantado,
+expuseram  a plataforma AMUSE como única ferramenta de desenvolvimento de
+\textit{Mobile Social Games} que utiliza uma abordagem MultiAgentes. Levando em
+consideração essa condição, características desejadas fornecidas pela
+plataforma, e objetivo desse trabalho, ela será a ferramenta base para o
+desenvolvimento.
 
 Até o momento da escrita desse projeto, os agentes da plataforma AMUSE que
 aplicam os padrões de \textit{design} de jogos não estão completos.
-Por exemplo, os agentes GRA(\textit{Games Room Agent}) e MMA(\textit{Match Tracer Agent})
-só permitem que um tipo de interação entre jogadores seja realizada,
-sendo ela assíncrona, ou síncrona \cite{bergenti2013}.
+Por exemplo, os agentes GRA(\textit{Games Room Agent}) e MMA(\textit{Match
+Tracer Agent}) só permitem que um tipo de interação entre jogadores seja
+realizada, sendo ela assíncrona, ou síncrona \cite{bergenti2013}.
 
-Levando em consideração as restrições presentes na ferramenta AMUSE, e consequentemente a
-abordagem MultiAgentes em \textit{Mobile Social Games}, a proposta desse trabalho
-é restringinda a um conjunto de características e padrões de \textit{design} predefinidos.
+Levando em consideração as restrições presentes na ferramenta AMUSE, e
+consequentemente a abordagem MultiAgentes em \textit{Mobile Social Games}, a
+proposta desse trabalho é restringinda a um conjunto de características e
+padrões de \textit{design} predefinidos, e apresentados na próxima seção.
 
 \section{Definição da Proposta}
 
-A proposta desse trabalho consiste em desenvolver um \textit{Mobile Social Game} para a
-plataforma Android com as seguintes características base de \textit{Mobile Social Games}:
+A proposta desse trabalho consiste no desenvolvimento de um \textit{Mobile
+Social Game} no estilo \textit{collectible card game} para a plataforma
+Android.
+
+Nessa proposta, os jogadores serão dispostos em uma arena em que
+poderão desafiar outros jogadores para um duelo. Esse duelo consiste em uma
+batalha de cartas, em turno, entre dois jogadores. Cada jogador utilizará um
+conjunto de cartas próprias, e sairá vencedor caso consiga reduzir os
+pontos do seu oponente a zero.
+
+Ao final de cada duelo, o jogador vencedor receberá pontos em um sistema de
+\textit{ranking} global, e terá a opção de trocar uma carta própria, com uma
+carta do oponente.
+
+Além desse sistema de duelos, a proposta abrange um conjunto de características
+relacionadas a \textit{Mobile Social Games}, padrões de \textit{design} de
+jogos, e modelo de monetização.
+
+As características que definem um jogo como \textit{Mobile Social Games}
+são variadas, e descritas na seção \ref{sec:refmobilesocialgames}. Nesse
+trabalho, as seguintes características foram selecionadas para aplicação na
+proposta:
 
 \begin{itemize}
   \item Interações assíncronas entre os jogadores;
@@ -28,16 +50,22 @@ plataforma Android com as seguintes características base de \textit{Mobile Soci
   \item Laço fraco na formação de relações sociais;
 \end{itemize}
 
-Os padrões de \textit{design} de jogos que serão aplicados a princípio são:
+No contexto de \textit{design} de jogos, os seguintes padrões foram
+selecionados:
 
 \begin{itemize}
   \item \textit{Ticket-based game};
+  \item \textit{Collectible card game};
   \item \textit{Public player statistics};
 \end{itemize}
 
-O estilo do jogo(\textit{gameplay}) será baseado no \textit{Online Trading Card Games}.
-E o modelo de monetização a ser aplicado é o \textit{Freemium}.
+Para a monetização dessa proposta, o modelo \textit{Freemium} será aplicado.
+Esse modelo permite que novos usuários possam jogar sem a necessidade de
+dispêndio inicial.
 
+A próxima seção apresenta uma visão arquitetural da disposição dos elementos
+que compõe essa proposta, e ilustra os pontos de aplicação do paradigma
+MultiAgentes.
 
 \section{Arquitetura do Sistema}
 %% Arquitetura igual ao do AMUSE
